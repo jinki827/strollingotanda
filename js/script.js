@@ -12,3 +12,16 @@ function openMap(buttonElement) {
         window.open(googleUrl, '_blank');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide( '.splide' , {
+        type: 'fade',
+        rewind: true,       // 最後までいったら、最初に巻き戻る
+        autoplay: true,     
+        interval: 6000,
+        speed: 2000,
+        pauseOnHover:false,
+        arrows: false,
+        pagination: false,    // 下部のドットナビゲーションを非表示する
+    }).mount();
+});
