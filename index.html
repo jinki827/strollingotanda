@@ -6,10 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>五反田さんぽ</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <!-- splide -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <!-- css -->
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/index.css">
 
@@ -28,7 +31,7 @@
     <!-- Top -->
     <div class="topContents">
       <h1 class="topTitle">五反田<br>さんぽ</h1>
-      <section class="splide" id="main-visual" aria-label="メインビジュアル">
+      <section class="splide" id="mainVisual" aria-label="メインビジュアル">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide"><img src="./img/topImg01.jpg" alt="目黒川わきの通りの写真" width="1655" height="1080"></li>
@@ -54,7 +57,7 @@
             <p class="spotTitle">五反田駅</p>
             <p class="spotDsecription">JR/東急池上線/浅草線/国道1号線 が交差する五反田の玄関口。<br>「五反田」の地名は、江戸時代、目黒川周辺の低地に約五反（約1,500坪）田んぼが広がっていたことから来ているとか。</p>
           </div>
-          <button type="button" 
+          <button type="button" class="linkButton" 
             data-google="https://maps.app.goo.gl/SogEPpDGHgXMAQbu6"
             data-apple="https://maps.apple/p/ugK7pfAG9nYSsU" onclick="openMap(this)">
             Map
@@ -69,7 +72,7 @@
             <p class="spotTitle">袖ヶ崎神社</p>
             <p class="spotDsecription">東五反田（中原街道沿い）に位置し、約890年以上の歴史を持つ神社です。地域の人々のお守り神（鎮守様）として長年親しまれています。</p>
           </div>
-          <button type="button" 
+          <button type="button" class="linkButton" 
             data-google="https://maps.app.goo.gl/8LAGaSXRiReEhkeL7"
             data-apple="https://maps.apple/p/xmbAULGemTh_wU" onclick="openMap(this)">
             Map
@@ -84,7 +87,7 @@
             <p class="spotTitle">目黒川</p>
             <p class="spotDsecription">江戸時代から水運の要として活躍し、現在は桜並木を堪能できる絶景スポットになっています。</p>
           </div>
-          <button type="button" 
+          <button type="button" class="linkButton" 
             data-google="https://maps.app.goo.gl/1RrAaqGKcS456iDL8"
             data-apple="https://maps.apple.com/frame?center=35.626379%2C139.719156&span=0.000479%2C0.000661" onclick="openMap(this)">
             Map
@@ -94,15 +97,110 @@
     </section>
 
     <!-- history -->
-    <section>
+    <section class="history">
       <h2>History</h2>
+      <div class="historyContainer">
+        
+        <!-- 画像スライダー -->
+        <div class="splide" id="historyMedia" aria-label="GalleryのSplide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./img/tophistoryImg01.jpg" alt="JR五反田駅" width="638" height="480" >
+              </li>
+              <li class="splide__slide">
+                <img src="./img/tophistoryImg02.jpg" alt="東急池上線五反田駅" width="638" height="480"  >
+              </li>
+              <li class="splide__slide">
+                <img src="./img/tophistoryImg03.jpg" alt="都営浅草線五反田駅" width="638" height="480" >
+              </li>
+              <li class="splide__slide">
+                <img src="./img/tophistoryImg04.jpg" alt="袖ヶ崎神社" width="517" height="480" >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- テキストスライダー -->
+        <div class="splide" id="historyText">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="slideContents">
+                  <div class="slideText">
+                    <h3>JR五反田駅</h3>
+                    <p>1911年（明治44年）10月15日に開業しました。<br>目黒駅と大崎駅の間にある山手線の駅として作られました。</p>
+                  </div>
+                  <div class="historylinkButton">
+                    <a class="linkButton">> More</a>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slideContents">
+                  <div class="slideText">
+                    <h3>東急池上線 五反田駅</h3>
+                    <p>1928年（昭和3年）6月17日に開業しました。<br>高い場所に駅があるのは、そのまま都心部へ延伸する計画だったとか。<br>現在は、品川区・大田区の住民の重要な通勤手段として活躍している。</p>
+                  </div>
+                  <div class="historylinkButton">
+                    <a class="linkButton">> More</a>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slideContents">
+                  <div class="slideText">
+                    <h3>都営浅草線 五反田駅</h3>
+                    <p>1968年（昭和43年）11月15日に開業しました。<br>東京で最初の都営地下鉄（地下鉄1号線）で、高度経済成長期の混雑緩和や、都心部と大田区・品川区方面を結ぶ幹線交通機関として計画されました。</p>
+                  </div>
+                  <div class="historylinkButton">
+                    <a class="linkButton">> More</a>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slideContents">
+                  <div class="slideText">
+                    <h3>袖ヶ崎神社</h3>
+                    <p>1137年（保延3年）、京都の伏見稲荷から勧請されました。<br>最初は「忍田稲荷大明神（しのだいなり）」として始まり、長い間この土地を見守ってきました。</p>
+                  </div>
+                  <div class="historylinkButton">
+                    <a class="linkButton">> More</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>          
+        </div>
+      </div>
     </section>
 
     <!-- gallery -->
     <section>
       <h2>gallery</h2>
+      <div class="splide" id="galleryMedia" aria-label="GalleryのSplide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img src="./img/topGallery02.jpg" alt="袖ヶ崎神社" width="517" height="480"></li>
+            <li class="splide__slide"><img src="./img/topGallery04.jpg" alt="京急池上線と目黒川" width="638" height="480"></li>
+            <li class="splide__slide"><img src="./img/topGallery05.jpg" alt="目黒川わきの飲み屋街" width="361" height="480"></li>
+            <li class="splide__slide"><img src="./img/topGallery06.jpg" alt="中央環状線高架橋下" width="638" height="480" ></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gallerylinkButton">
+        <a class="linkButton">> More</a>
+      </div>
     </section>
   </main>
+  <!-- フッター -->
+  <footer>
+    <div class="footerInner">
+    <p class="footerTitle">五反田<br>さんぽ</p>
+    <p class="footerText">いつも何気なく通りすぎている風景でも、時間をかけて眺めてみると意外と趣のある風景があるかもしれません。</p>
+    <p class="copyright"><small>&copy;Jnki Watanabe</small></p>
+    </div>
+  </footer>
 </body>
 
 </html>

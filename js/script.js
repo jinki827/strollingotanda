@@ -13,15 +13,48 @@ function openMap(buttonElement) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    new Splide( '.splide' , {
-        type: 'fade',
-        rewind: true,       // 最後までいったら、最初に巻き戻る
-        autoplay: true,     
-        interval: 6000,
-        speed: 2000,
-        pauseOnHover:false,
-        arrows: false,
-        pagination: false,    // 下部のドットナビゲーションを非表示する
-    }).mount();
+
+// トップ画面のＪＳ //
+
+// splide　メインビジュアル
+new Splide( '#mainVisual' , {
+    type: 'fade',
+    rewind: true,       // 最後までいったら、最初に巻き戻る
+    autoplay: true,     
+    interval: 6000,
+    speed: 2000,
+    pauseOnHover:false,
+    arrows: false,
+    pagination: false,    // 下部のドットナビゲーションを非表示する
+}).mount();
+
+const historyMedia = new Splide( '#historyMedia' , {
+    // type: 'loop',
+    speed: 800,
+    arrows: false,
+    pagination: true,
 });
+
+const historyText = new Splide( '#historyText' , {
+    type: 'fade',
+    rewind: true,
+    speed: 600,
+    arrows: false,
+    pagination: false,
+});
+
+historyMedia.sync(historyText);
+historyMedia.mount();
+historyText.mount();
+
+new Splide( '#galleryMedia' , {
+    type: 'loop',
+    perPage: 3,
+    perMove: 1,
+    gap: 10,
+    autoplay: true,     
+    // interval: 6000,
+    speed: 600,
+    speed: 800,
+    pagination: true,
+}).mount();

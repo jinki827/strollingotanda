@@ -43,3 +43,30 @@
   height: 100%;
   object-fit: cover;
 }
+
+.historyContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#historyMedia,
+#historyText {
+  flex: 1;
+  width: 50%;
+}
+
+
+
+/* モバイル表示 */
+@media (max-width: 768px) {
+  .historyContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #historyMedia,
+  #historyText {
+    width: 100%;
+  }
+}
