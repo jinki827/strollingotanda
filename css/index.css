@@ -15,6 +15,28 @@
 }
 
 
+h2 {
+  color: var(--colorFontGreen);
+  font-size: 36px;
+  margin: 20px 0px;
+  letter-spacing: .1em;
+}
+
+h3 {
+  color: var(--colorFontGreen);
+  font-size: 24px;
+  margin: 20px 0px;
+  letter-spacing: .1em;
+}
+
+p {
+  color: #706D6D;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+}
+
+
+/* メインビジュアル */
 .topContents {
   position: relative;
   width: 100%;
@@ -27,6 +49,13 @@
   z-index: 10;
   pointer-events: none;
   color: #fff;
+  font-size: 40px;
+  /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
+  paint-order: stroke fill; */
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+  writing-mode: vertical-rl;
+  letter-spacing: 0.3em;
+  line-height: 1.2;
 }
 
 .splide {
@@ -44,10 +73,68 @@
   object-fit: cover;
 }
 
+.topGaparea {
+  height: 70px;
+  background-color: var(--colorBaseGreen);
+}
+
+
+/* Spotセクション */
+.spot {
+  background-color: var(--colorBaseWhite);
+  padding: 50px 0px;
+}
+.spotWrap {
+  margin: 0px 100px;
+}
+
+.spot1 {
+  display: flex;
+  gap: 50px;
+  padding: 50px 0px;
+  align-items: stretch;
+}
+
+.spot1:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.spotInner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px 0;
+}
+.spotInner .linkButton {
+  margin-top: auto; /* 上部の余白を自動で最大化し、ボタンを下へ押しやる */
+  align-self: flex-end; /* ボタン自身を右側に寄せる */
+}
+.spotInner .linkButton:nth-child(odd) {
+  margin-top: auto; /* 上部の余白を自動で最大化し、ボタンを下へ押しやる */
+  align-self: flex-start; /* ボタン自身を右側に寄せる */
+}
+
+.spot1 img {
+  width: 60%;
+  object-fit: cover;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/* history */
+.history {
+  background-color: var(--colorBaseGreen);
+  padding: 50px 0px;
+}
+.historyWrap {
+  margin: 0px 100px;
+}
+
 .historyContainer {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
+  padding: 50px 0px;
 }
 
 #historyMedia,
@@ -57,6 +144,24 @@
 }
 
 
+
+/* gallery */
+.gallery {
+  background-color: var(--colorBaseWhite);
+  padding: 50px 0px;
+}
+
+.gallery h2{
+  margin: 20px 100px;
+}
+
+.gallery .splide {
+  padding: 50px 0px;
+}
+
+.gallerylinkButton {
+  margin: 0 auto;
+}
 
 /* モバイル表示 */
 @media (max-width: 768px) {
