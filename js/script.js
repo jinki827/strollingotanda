@@ -1,61 +1,82 @@
 // マップにとぶボタンを押した時の関数
 function openMap(buttonElement) {
-    // 押されたボタンからそれぞれのURLを取得
-    const googleUrl = buttonElement.getAttribute('data-google');
-    const appleUrl = buttonElement.getAttribute('data-apple');
-    
-    const isiPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // 押されたボタンからそれぞれのURLを取得
+  const googleUrl = buttonElement.getAttribute("data-google");
+  const appleUrl = buttonElement.getAttribute("data-apple");
 
-    if (isiPhone) {
-        window.location.href = appleUrl;
-    } else {
-        window.open(googleUrl, '_blank');
-    }
+  const isiPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isiPhone) {
+    window.location.href = appleUrl;
+  } else {
+    window.open(googleUrl, "_blank");
+  }
 }
-
 
 // トップ画面のＪＳ //
 
 // splide　メインビジュアル
-new Splide( '#mainVisual' , {
-    type: 'fade',
-    rewind: true,       // 最後までいったら、最初に巻き戻る
-    autoplay: true,     
+const mainVisualEl = document.querySelector("#mainVisual");
+if (mainVisualEl) {
+  new Splide(mainVisualEl, {
+    type: "fade",
+    rewind: true, // 最後までいったら、最初に巻き戻る
+    autoplay: true,
     interval: 6000,
     speed: 2000,
-    pauseOnHover:false,
+    pauseOnHover: false,
     arrows: false,
-    pagination: false,    // 下部のドットナビゲーションを非表示する
-}).mount();
+    pagination: false, // 下部のドットナビゲーションを非表示する
+  }).mount();
+}
 
-const historyMedia = new Splide( '#historyMedia' , {
-    // type: 'loop',
+// splide　historyセクション
+const historyMediaEl = document.querySelector("#historyMedia");
+const historyTextEl = document.querySelector("#historyText");
+
+if (historyMediaEl && historyTextEl) {
+  const historyMedia = new Splide(historyMediaEl, {
     autoplay: true,
     speed: 800,
     arrows: false,
     pagination: true,
-});
+  });
 
-const historyText = new Splide( '#historyText' , {
-    type: 'fade',
+  const historyText = new Splide(historyTextEl, {
+    type: "fade",
     rewind: true,
     speed: 600,
     arrows: false,
     pagination: false,
-});
+  });
 
-historyMedia.sync(historyText);
-historyMedia.mount();
-historyText.mount();
+  historyMedia.sync(historyText);
+  historyMedia.mount();
+  historyText.mount();
+}
 
-new Splide( '#galleryMedia' , {
-    type: 'loop',
+// splide　galleryセクション
+const galleryMediaEl = document.querySelector("#galleryMedia");
+if (galleryMediaEl) {
+  new Splide(galleryMediaEl, {
+    type: "loop",
     perPage: 3,
     perMove: 1,
     gap: 10,
-    autoplay: true,     
-    // interval: 6000,
-    speed: 600,
+    autoplay: true,
     speed: 800,
     pagination: true,
-}).mount();
+  }).mount();
+}
+
+
+// history画面のＪＳ //
+document.querySelectorAll(`.splideHistory`).forEach(slide => {
+  new Splide(slide, {
+    type: "loop",
+    autoplay: true,
+    speed: 800,
+    arrows: false,
+    pagination: true,
+  }).mount();
+});
