@@ -30,6 +30,7 @@ new Splide( '#mainVisual' , {
 
 const historyMedia = new Splide( '#historyMedia' , {
     // type: 'loop',
+    autoplay: true,
     speed: 800,
     arrows: false,
     pagination: true,

@@ -7,6 +7,7 @@
   
   /* 色の指定 */
   --colorFontGreen: #2A5235;
+  --colorFontWhite: #f5f5f5;
   --colorBaseGreen: #E8ECEA;
   --colorBaseWhite: #F5F5F5;
   --colorBaseFooter: #3A6346;
@@ -85,10 +86,12 @@ p {
   padding: 50px 0px;
 }
 .spotWrap {
+  max-width: 1050px;
   margin: 0px 100px;
 }
 
 .spot1 {
+
   display: flex;
   gap: 50px;
   padding: 50px 0px;
@@ -102,16 +105,12 @@ p {
 .spotInner {
   display: flex;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
   padding: 20px 0;
 }
 .spotInner .linkButton {
-  margin-top: auto; /* 上部の余白を自動で最大化し、ボタンを下へ押しやる */
-  align-self: flex-end; /* ボタン自身を右側に寄せる */
-}
-.spotInner .linkButton:nth-child(odd) {
-  margin-top: auto; /* 上部の余白を自動で最大化し、ボタンを下へ押しやる */
-  align-self: flex-start; /* ボタン自身を右側に寄せる */
+  margin: auto; /* 上部の余白を自動で最大化し、ボタンを下へ押しやる */
+  align-self: center; /* ボタン自身を右側に寄せる */
 }
 
 .spot1 img {
@@ -137,6 +136,11 @@ p {
   padding: 50px 0px;
 }
 
+.historylinkButton {
+  margin-top: 40px;
+  text-align: center;
+}
+
 #historyMedia,
 #historyText {
   flex: 1;
@@ -160,11 +164,24 @@ p {
 }
 
 .gallerylinkButton {
-  margin: 0 auto;
+  margin: 30px auto;
+  text-align: center;
+  padding-left: 50px;
 }
+
 
 /* モバイル表示 */
 @media (max-width: 768px) {
+  .spot1 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0px;
+    align-items: stretch;
+  }
+  .spot1:nth-child(odd) {
+  flex-direction: column;
+}
+
   .historyContainer {
     flex-direction: column;
     gap: 20px;
