@@ -17,9 +17,11 @@
 
 h2 {
   color: var(--colorFontGreen);
+  font-family: var(--fontAccent);
   font-size: 36px;
-  margin: 20px 0px;
+  margin: 20px 0px 120px;
   letter-spacing: .1em;
+  text-shadow: 0 0 2 #1B2820;
 }
 
 h3 {
@@ -35,20 +37,12 @@ p {
   line-height: 1.3;
 }
 
-
-.splide {
-  height: 60vh;
-}
-
-.splide__track,
-.splide__slide {
-  height: 100%;
-}
-
-.splide__slide img {
+img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
   object-fit: cover;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .topGaparea {
@@ -56,7 +50,36 @@ p {
   background-color: var(--colorBaseGreen);
 }
 
-.galletyPage {
-  background-color: var(--colorBaseGreen02);
-  padding: 50px 0px;
+.galleryPage {
+  background-color: var(--colorBaseWhite);
+  padding: 50px 10px;
+}
+
+.galleryPage h2 {
+  text-align: center;
+}
+
+.galleryPage h2::after {
+  content: "";
+  display: block;
+  margin: 12px auto;
+  width: 150px;
+  height: 1.2px;
+  background-color: var(--colorFontGreen);
+}
+
+.galleryContainer {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 400px);
+  gap: 30px 15px;
+  justify-content: center;
+}
+
+.imgList {
+  text-align: center;
+}
+
+.imgList p {
+  margin-top: 5px;
 }

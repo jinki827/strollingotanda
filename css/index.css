@@ -18,6 +18,7 @@
 
 h2 {
   color: var(--colorFontGreen);
+  font-family: var(--fontAccent);
   font-size: 36px;
   margin: 20px 0px;
   letter-spacing: .1em;

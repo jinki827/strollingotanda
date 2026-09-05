@@ -17,15 +17,17 @@
 
 h2 {
   color: var(--colorFontWhite);
+  font-family: var(--fontAccent);
   font-size: 36px;
-  margin: 20px 0px;
+  margin: 20px 0px 200px;
   letter-spacing: .1em;
+  /* text-shadow: 0 0 2 #1B2820; */
 }
 
 h3 {
   color: var(--colorFontWhite);
   font-size: 24px;
-  margin: 20px 0px;
+  margin-bottom:35px;
   letter-spacing: .1em;
 }
 
@@ -36,8 +38,9 @@ p {
 }
 
 
+
 .splide {
-  height: 60vh;
+  height: auto;
 }
 
 .splide__track,
@@ -47,8 +50,13 @@ p {
 
 .splide__slide img {
   width: 100%;
-  height: 100%;
+  max-width: 750px;
+  height: auto;
+  aspect-ratio: 4/3;
   object-fit: cover;
+  box-shadow: 2px 2px 10px rgba(241, 250, 234, 0.4);
+  display: block;
+  margin: 0 auto;
 }
 
 .topGaparea {
@@ -58,5 +66,36 @@ p {
 
 .historyPage {
   background-color: var(--colorBaseGreen02);
-  padding: 50px 0px;
+  padding: 50px 10px;
 }
+
+.historyPage h2 {
+  text-align: center;
+}
+
+.historyPage h2::after {
+  content: "";
+  display: block;
+  margin: 12px auto;
+  width: 150px;
+  height: 1.2px;
+  background-color: var(--colorFontWhite);
+}
+
+.section1{
+  margin-bottom: 200px;
+}
+
+.sectionText {
+  max-width: 650px;
+  margin: 0 auto 60px;
+}
+
+.sectionText p + p {
+  margin-top: 1.3em;
+}
+
+.historyPage h3 {
+  text-align: center;
+}
+

@@ -74,8 +74,24 @@ if (galleryMediaEl) {
 document.querySelectorAll(`.splideHistory`).forEach(slide => {
   new Splide(slide, {
     type: "loop",
+    perPage: 3,
+    perMove: 1,
+    gap: 30,
+    padding: 100,
+    // fixedWidth: 750,
+    breakpoints: {
+      1350:{
+        perPage: 2,
+        gap: 40,
+      },
+      875: {
+        gap: 30,
+        padding:50,
+        fixedWidth:300
+      }
+    },
     autoplay: true,
-    speed: 800,
+    speed: 1000,
     arrows: false,
     pagination: true,
   }).mount();
