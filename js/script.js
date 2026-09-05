@@ -36,7 +36,6 @@ const historyTextEl = document.querySelector("#historyText");
 
 if (historyMediaEl && historyTextEl) {
   const historyMedia = new Splide(historyMediaEl, {
-    autoplay: true,
     speed: 800,
     arrows: false,
     pagination: true,
@@ -62,9 +61,17 @@ if (galleryMediaEl) {
     type: "loop",
     perPage: 3,
     perMove: 1,
-    gap: 10,
+    gap: 20,
+    padding: 50,
+    breakpoints: {
+      1060:{
+        gap: 30,
+        padding:50,
+        fixedWidth:300
+      }
+    },
     autoplay: true,
-    speed: 800,
+    speed: 1000,
     pagination: true,
   }).mount();
 }
@@ -78,11 +85,9 @@ document.querySelectorAll(`.splideHistory`).forEach(slide => {
     perMove: 1,
     gap: 30,
     padding: 100,
-    // fixedWidth: 750,
     breakpoints: {
-      1350:{
+      1700:{
         perPage: 2,
-        gap: 40,
       },
       875: {
         gap: 30,
