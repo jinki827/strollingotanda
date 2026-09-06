@@ -151,7 +151,13 @@ p {
 
 .historyContainer .splide__slide {
   padding: 15px;
-  box-sizing: border-box;
+}
+
+.historyContainer .splide__pagination {
+  bottom: -10px;
+}
+.historyContainer .splide__pagination__page.is-active {
+  background-color: var(--colorFontGreen);
 }
 
 .historyContainer .splide__slide img {
@@ -164,11 +170,11 @@ p {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-#historyMedia,
-#historyText {
-  flex: 1;
+#historyMedia {
   width: 60%;
-  margin: -15px;
+}
+#historyText {
+  width: 40%;
 }
 
 
