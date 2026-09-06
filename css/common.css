@@ -12,6 +12,7 @@
   --colorBaseFooter: #3A6346;
   --colorBaseGreen02: #1B2820;
   --colorBaseGreen03: #C6DAC6;
+  --colorIcon: #92AF9A;
 }
 
 *,
@@ -29,6 +30,86 @@ body {
 
 a {
   text-decoration: none;
+}
+
+/* サイドメニュ */
+.sideButton {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  z-index: 3;
+}
+/* ハンバーガーアイコン */
+.sideButton div {
+  height: 5px;
+  width: 60%;
+  background-color: #92AF9A;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease-out .5s;
+  border-radius: 2px;
+}
+.sideButton div:nth-last-of-type(1) {
+  transform: translate(-50%, -15px);
+}
+.sideButton div:nth-last-of-type(3) {
+  transform: translate(-50%, 10px);
+}
+
+.sideButton.active div:nth-last-of-type(1) {
+  transform: rotate(-45deg) translate(-50%, 0%);
+  transform-origin: 0% 50%;
+  width: 65%;
+}
+.sideButton.active div:nth-last-of-type(2) {
+  opacity: 0;
+  transform: translate(-100%, -50%);
+}
+.sideButton.active div:nth-last-of-type(3) {
+  transform: rotate(45deg) translate(-46%, 0%);
+  transform-origin: 0% 50%;
+  width: 65%;
+}
+
+/* サイドバー */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  padding: 90px 0 100px;
+  background-color: var(--colorBaseGreen03);
+  transform: translate(100%);
+  transition: .5s;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+
+nav.active {
+  transform: translate(0%);
+}
+
+.sideBar a {
+  color: var(--colorFontGreen);
+  font-family: var(--fontAccent);
+  font-size: 24px;
+  letter-spacing: .1em;
+  text-shadow: 0 0 2 #1B2820;
 }
 
 .linkButton {
@@ -58,7 +139,7 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 100px ;
-  background-color: #3A6346;
+  background-color: var(--colorBaseFooter);
 }
 
 .footerTitle {

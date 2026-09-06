@@ -13,7 +13,15 @@ function openMap(buttonElement) {
   }
 }
 
-// トップ画面のＪＳ //
+// サイドメニューJS //
+document.getElementById("sideButton").addEventListener("click", function() {
+  this.classList.toggle("active");    // クラス追加
+  document.getElementById("sideBar").classList.toggle("active");
+  document.getElementById("mask").classList.toggle("active");
+});
+
+
+// トップ画面のJS //
 
 // splide　メインビジュアル
 const mainVisualEl = document.querySelector("#mainVisual");

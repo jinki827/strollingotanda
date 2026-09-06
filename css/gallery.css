@@ -13,6 +13,7 @@
   --colorBaseFooter: #3A6346;
   --colorBaseGreen02: #1B2820;
   --colorBaseGreen03: #C6DAC6;
+  --colorIcon: #92AF9A;
 }
 
 h2 {
@@ -46,7 +47,7 @@ img {
 }
 
 .topGaparea {
-  height: 70px;
+  height: 80px;
   background-color: var(--colorBaseGreen);
 }
 
