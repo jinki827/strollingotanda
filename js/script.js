@@ -29,9 +29,19 @@ const menuLinks = document.querySelectorAll("#sideBar a")
 console.log(location)
 const locationData = location
 menuLinks.forEach(link => {
+  
+  // ページ遷移したら、activeクラスを外す
+  link.addEventListener("click", function() {
+    document.getElementById("sideButton").classList.remove("active")
+    document.getElementById("sideBar").classList.remove("active")
+    document.getElementById("mask").classList.remove("active")
+  })
+  
+  // サイドバーで現在のページにactiveクラスをつけてアイコンを置くための目印にする
   if (link.getAttribute("href") === locationData.pathname) {
     link.classList.add("active")
   } 
+  
 })
 
 
