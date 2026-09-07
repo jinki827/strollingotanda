@@ -81,6 +81,11 @@ a {
   width: 65%;
 }
 
+.sideButton.onMain div{
+  background-color: #2A5235;
+  height: 3px;
+}
+
 /* サイドバー */
 nav {
   position: fixed;

@@ -3,15 +3,19 @@ function openMap(buttonElement) {
   // 押されたボタンからGoogleMapのURLを取得して新しいタブで開く
   const googleUrl = buttonElement.getAttribute("data-google")
   window.open(googleUrl, "_blank")
-
   // apple版のMapアプリに誘導うる機能は削除。iPhoneユーザーもgoogleMap使ってる
 }
 
 // サイドメニューJS //
-document.getElementById("sideButton").addEventListener("click", function() {
+const sideButtonEl = document.getElementById("sideButton")
+const sideBarEl = document.getElementById("sideBar")
+const maskEl = document.getElementById("mask")
+
+// サイドボタンが押されたら、activeクラスを追加してサイドバー登場
+sideButtonEl.addEventListener("click", function() {
   this.classList.toggle("active")    // クラス追加
-  document.getElementById("sideBar").classList.toggle("active")
-  document.getElementById("mask").classList.toggle("active")
+  sideBarEl.classList.toggle("active")
+  maskEl.classList.toggle("active")
 })
 
 
@@ -24,11 +28,11 @@ console.log(location)
 const locationData = location
 menuLinks.forEach(link => {
   
-  // ページ遷移したら、activeクラスを外す
+  // ページ遷移したら、activeクラスを外して、サイドバーを隠す
   link.addEventListener("click", function() {
-    document.getElementById("sideButton").classList.remove("active")
-    document.getElementById("sideBar").classList.remove("active")
-    document.getElementById("mask").classList.remove("active")
+    sideButtonEl.classList.remove("active")
+    sideBarEl.classList.remove("active")
+    maskEl.classList.remove("active")
   })
   
   // サイドバーで現在のページにactiveクラスをつけてアイコンを置くための目印にする
@@ -37,6 +41,10 @@ menuLinks.forEach(link => {
   } 
   
 })
+
+
+
+
 
 
 // トップ画面のJS //
@@ -55,6 +63,24 @@ if (mainVisualEl) {
     pagination: false, // 下部のドットナビゲーションを非表示する
   }).mount()
 }
+
+if (mainVisualEl && sideButtonEl) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        sideButtonEl.classList.add("onMain")
+      } else {
+        sideButtonEl.classList.remove("onMain")
+      }
+    })
+  },{
+    rootMargin: "0px 0px -90% 0px"
+  })
+  observer.observe(mainVisualEl)
+}
+
+
+
 
 // splide　historyセクション
 const historyMediaEl = document.getElementById("historyMedia")
