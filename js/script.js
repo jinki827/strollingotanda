@@ -125,6 +125,7 @@ if (galleryMediaEl) {
     },
     autoplay: true,
     speed: 1000,
+    arrows:false,
     pagination: true,
   }).mount()
 }
