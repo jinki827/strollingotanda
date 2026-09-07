@@ -64,6 +64,7 @@ if (mainVisualEl) {
   }).mount()
 }
 
+// サイドボタンがmainVisualの範囲に入ったらonMainクラスをつける処理
 if (mainVisualEl && sideButtonEl) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
