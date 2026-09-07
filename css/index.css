@@ -13,7 +13,7 @@
   --colorBaseFooter: #3A6346;
   --colorBaseGreen02: #1B2820;
   --colorBaseGreen03: #C6DAC6;
-  --colorIcon: #92AF9A;
+  /* --colorIcon: #92AF9A; */
 }
 
 
@@ -39,6 +39,17 @@ p {
   line-height: 1.3;
 }
 
+.splide__track,
+.splide__slide {
+  height: 100%;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* メインビジュアル */
 .topContents {
@@ -54,30 +65,33 @@ p {
   pointer-events: none;
   color: #fff;
   font-size: 40px;
-  /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
-  paint-order: stroke fill; */
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
   writing-mode: vertical-rl;
   letter-spacing: 0.3em;
   line-height: 1.2;
 }
 
-
-.splide__track,
-.splide__slide {
-  height: 100%;
-}
-
-.splide__slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* mainVisual */
 .topContents .splide {
   height: 75vh;
 }
+
+.topContents .splide__slide {
+  position: relative;
+}
+
+.topContents .splide__slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(to right, transparent 30%, rgba(255, 255, 255, 0.5) 100%); */
+  /* background: linear-gradient(to right, transparent 30%, rgba(0, 0, 0, 0.5) 100%); */
+  background: linear-gradient(to right, transparent 30%, rgba(240, 233, 238, 0.3) 100%);
+  pointer-events: none;
+}
+
 
 /* siteCocept セクション */
 .siteConcept {

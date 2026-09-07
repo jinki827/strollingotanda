@@ -12,7 +12,9 @@
   --colorBaseFooter: #3A6346;
   --colorBaseGreen02: #1B2820;
   --colorBaseGreen03: #C6DAC6;
+  /* --colorIcon: #3bce71; */
   --colorIcon: #92AF9A;
+
 }
 
 *,
@@ -48,13 +50,14 @@ a {
 .sideButton div {
   height: 5px;
   width: 60%;
-  background-color: #92AF9A;
+  background-color: var(--colorIcon);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: ease-out .5s;
   border-radius: 2px;
+  /* filter: drop-shadow(0 1px 3px rgba(219, 186, 20, 0.5)); */
 }
 .sideButton div:nth-last-of-type(1) {
   transform: translate(-50%, -15px);
