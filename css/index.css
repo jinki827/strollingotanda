@@ -76,13 +76,36 @@ p {
 
 /* mainVisual */
 .topContents .splide {
-  height: 60vh;
+  height: 75vh;
 }
 
-
-.topGaparea {
-  height: 80px;
+/* siteCocept セクション */
+.siteConcept {
+  padding: 0 10px;
+  height: 25vh;
+  min-height: 150px;
   background-color: var(--colorBaseGreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.siteConcept p {
+  color: var(--colorFontGreen);
+}
+.conceptTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conceptText01 {
+  font-size: 20px;
+}
+
+.conceptText02 {
+  margin-top: 15px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
 }
 
 
