@@ -1,16 +1,10 @@
 // マップにとぶボタンを押した時の関数
 function openMap(buttonElement) {
-  // 押されたボタンからそれぞれのURLを取得
+  // 押されたボタンからGoogleMapのURLを取得して新しいタブで開く
   const googleUrl = buttonElement.getAttribute("data-google")
-  const appleUrl = buttonElement.getAttribute("data-apple")
+  window.open(googleUrl, "_blank")
 
-  const isiPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent)
-
-  if (isiPhone) {
-    window.location.href = appleUrl
-  } else {
-    window.open(googleUrl, "_blank")
-  }
+  // apple版のMapアプリに誘導うる機能は削除。iPhoneユーザーもgoogleMap使ってる
 }
 
 // サイドメニューJS //
