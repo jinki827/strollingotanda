@@ -190,9 +190,11 @@ p {
   padding: 15px;
 }
 
+/* スライダーのスライダーバーの位置調整 */
 .historyContainer .splide__pagination {
   bottom: -10px;
 }
+/* スライダーのスライダーバーの色変更 */
 .historyContainer .splide__pagination__page.is-active {
   background-color: var(--colorFontGreen);
 }
@@ -232,6 +234,15 @@ p {
   height: auto;
   padding: 50px 0px;
 }
+
+.gallery .splide__pagination {
+  bottom: -10px;
+}
+
+.gallery .splide__pagination__page.is-active {
+  background-color: var(--colorFontGreen);
+}
+
 
 .gallery .splide__slide img {
   width: 100%;

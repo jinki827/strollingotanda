@@ -100,3 +100,10 @@ p {
   text-align: center;
 }
 
+.splideHistory .splide__pagination {
+  bottom: -40px;
+}
+
+.splideHistory .splide__pagination__page.is-active {
+  background-color: var(--colorFontGreen);
+}
