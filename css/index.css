@@ -174,6 +174,16 @@ p {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
+.fadeIn {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fadeIn.isActive {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* historyセクション */
 .history {

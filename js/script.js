@@ -123,6 +123,28 @@ if (galleryMediaEl) {
   }).mount()
 }
 
+// 各要素をフェードインさせる処理
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    // 対象の要素が画面内に入ったか判定
+    if (entry.isIntersecting) {
+      // 画面内に入ったら、`isActive` クラスを付与して、フェードイン
+      entry.target.classList.add("isActive")
+
+      // 初回だけ実行したいので、一度表示されたら要素の監視を解除する
+      observer.unobserve(entry.target)
+    }
+  })
+  }, {
+    // オプション設定
+    rootMargin: '0px 0px -100px 0px'  // 画面の下から100px 分入ったタイミングで発火させるときれいらしい
+})
+
+// `.fadeIn`　クラスを持つすべての要素を監視対象に登録する
+document.querySelectorAll(".fadeIn").forEach(el => {
+  observer.observe(el)
+})
+
 
 // history画面のＪＳ //
 document.querySelectorAll(`.splideHistory`).forEach(slide => {
