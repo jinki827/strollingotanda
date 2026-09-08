@@ -12,6 +12,7 @@
   --colorBaseFooter: #3A6346;
   --colorBaseGreen02: #1B2820;
   --colorBaseGreen03: #C6DAC6;
+  --colorAccent: #8f5687;
   /* --colorIcon: #3bce71; */
   --colorIcon: #92AF9A;
 
@@ -122,9 +123,9 @@ nav.active {
   justify-content: center;
   align-items: center;
   padding: 10px 40px;
-  border: 1.5px solid var(--colorFontGreen);
+  border: 1.5px solid var(--colorAccent);
   border-radius: 5px;
-  color: var(--colorFontGreen);
+  color: var(--colorAccent);
   font-family: inherit;
   font-size: 14px;
   font-weight: 580;
@@ -134,7 +135,7 @@ nav.active {
 }
 
 .linkButton:hover {
-  background-color: var(--colorFontGreen);
+  background-color: var(--colorAccent);
   color: #FFF;
 }
 
