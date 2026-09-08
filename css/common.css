@@ -121,12 +121,19 @@ nav.active {
   text-shadow: 0 0 2 #1B2820;
 }
 
+.sideBar a.active{
+  color: var(--colorAccent);
+}
 .sideBar a.active::before {
-  content: "●";
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--colorAccent);
   position: absolute;
   right: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-35%);
   margin-right: 8px;
 }
 
