@@ -79,6 +79,17 @@ p {
   position: relative;
 }
 
+/* 起動時にメインビジュアルをフェードインさせる処理 */
+#mainVisual {
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#mainVisual.isLoaded {
+  opacity: 1;
+}
+
+/* メインビジュアルに影をつける処理 */
 .topContents .splide__slide::after {
   content: "";
   position: absolute;

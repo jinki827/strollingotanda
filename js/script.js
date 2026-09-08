@@ -52,7 +52,7 @@ menuLinks.forEach(link => {
 // splide　メインビジュアル
 const mainVisualEl = document.getElementById("mainVisual")
 if (mainVisualEl) {
-  new Splide(mainVisualEl, {
+  const mainVisualsplide = new Splide(mainVisualEl, {
     type: "fade",
     rewind: true, // 最後までいったら、最初に巻き戻る
     autoplay: true,
@@ -61,7 +61,14 @@ if (mainVisualEl) {
     pauseOnHover: false,
     arrows: false,
     pagination: false, // 下部のドットナビゲーションを非表示する
-  }).mount()
+  })
+  
+  // マウント前にmounted イベントをセットして、フェードインしようとする。
+  mainVisualsplide.on("mounted", () => {
+    mainVisualEl.classList.add("isLoaded")
+  })
+  
+  mainVisualsplide.mount()
 }
 
 
