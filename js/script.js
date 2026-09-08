@@ -24,8 +24,8 @@ const menuLinks = document.querySelectorAll("#sideBar a")
 // querySelectorAll：該当するすべての要素を取得する。node-listの形式で取得する。
 // node-list：複数の要素(node)
 
-console.log(location)
-const locationData = location
+const locationData = "." + location.pathname
+console.log(locationData)
 menuLinks.forEach(link => {
   
   // ページ遷移したら、activeクラスを外して、サイドバーを隠す
@@ -36,7 +36,8 @@ menuLinks.forEach(link => {
   })
   
   // サイドバーで現在のページにactiveクラスをつけてアイコンを置くための目印にする
-  if (link.getAttribute("href") === locationData.pathname) {
+  console.log(link.getAttribute("href"))
+  if (link.getAttribute("href") === locationData) {
     link.classList.add("active")
   } 
   
