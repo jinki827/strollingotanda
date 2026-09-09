@@ -24,11 +24,8 @@ const menuLinks = document.querySelectorAll("#sideBar a")
 // querySelectorAll：該当するすべての要素を取得する。node-listの形式で取得する。
 // node-list：複数の要素(node)
 
-let currentFile = location.pathname.split('/').filter(Boolean).pop() || "index.html"
-if (!currentFile.endsWith(".html")) {
-  currentFile = "index.html"
-}
-console.log(currentFile)
+const locationPath = location.pathname
+console.log(location.pathname)
 // 実装時に、全体のpathを取得してきてしまうので、ページのファイルパスだけに絞った。
 
 menuLinks.forEach(link => {
@@ -40,11 +37,10 @@ menuLinks.forEach(link => {
     maskEl.classList.remove("active")
   })
   
-  // サイドバーで現在のページにactiveクラスをつけてアイコンを置くための目印にする
-  const linkHref = link.getAttribute("href")
-  console.log(linkHref)
-  // サイドバーのリンクページボタンで、現在のページ名がリンク先に含まれているボタンを発火させる
-  if (linkHref.includes(currentFile)) {
+  // サイドバーのリンクボタンで現在のページにリンク先が同じボタンクラスに activeクラスをつけてアイコンを置くための目印にする
+  const linkPath = link.pathname
+  console.log(link.pathname)
+  if (linkPath === locationPath) {
     link.classList.add("active")
   } 
   
