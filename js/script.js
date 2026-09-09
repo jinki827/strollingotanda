@@ -24,7 +24,10 @@ const menuLinks = document.querySelectorAll("#sideBar a")
 // querySelectorAll：該当するすべての要素を取得する。node-listの形式で取得する。
 // node-list：複数の要素(node)
 
-let currentFile = location.pathname.split('/').pop()
+let currentFile = location.pathname.split('/').filter(Boolean).pop() || "index.html"
+if (!currentFile.endsWith(".html")) {
+  currentFile = "index.html"
+}
 console.log(currentFile)
 // 実装時に、全体のpathを取得してきてしまうので、ページのファイルパスだけに絞った。
 
