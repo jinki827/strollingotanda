@@ -140,8 +140,8 @@ const observer = new IntersectionObserver((entries, observer) => {
     rootMargin: '0px 0px -100px 0px'  // 画面の下から100px 分入ったタイミングで発火させるときれいらしい
 })
 
-// `.fadeIn`　クラスを持つすべての要素を監視対象に登録する
-document.querySelectorAll(".fadeIn").forEach(el => {
+// `.fadeIn`など　動作をつけたいクラスを持つすべての要素を監視対象に登録する
+document.querySelectorAll(".fadeIn, .slideInLeft, .charFadeIn").forEach(el => {
   observer.observe(el)
 })
 

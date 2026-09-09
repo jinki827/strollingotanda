@@ -83,7 +83,7 @@ p {
 /* 起動時にメインビジュアルをフェードインさせる処理 */
 #mainVisual {
   opacity: 0;
-  transition: opacity 2s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: opacity 5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 #mainVisual.isLoaded {
@@ -103,6 +103,8 @@ p {
   background: linear-gradient(to right, transparent 20%, rgba(40, 18, 0, 0.4) 100%);
   pointer-events: none;
 }
+
+
 
 
 /* siteConcept セクション */
@@ -133,6 +135,27 @@ p {
   font-size: 12px;
   letter-spacing: 0.2em;
 }
+
+/* 初回ロード時のフェードインの動き */
+/* ワイプ表現によるフェードイン(グラデーションマスク・ワイプ)処理 */
+.conceptText01,
+.conceptText02 {
+  mask-image: linear-gradient(to right, #000 0%, #000 35%, transparent 65%, transparent 100%);
+  mask-size: 300% 100%;
+  mask-position: 100% 0;
+  transition: mask-position 5s ease-out;
+}
+
+.conceptTextContainer.isActive .conceptText01{
+  mask-position: 0 0;
+  transition-delay: 1.3s;
+}
+
+.conceptTextContainer.isActive .conceptText02{
+  mask-position: 0 0;
+  transition-delay: 1.8s;
+}
+
 
 
 /* Spotセクション */
@@ -174,6 +197,8 @@ p {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
+
+/* 初回ロード時のフェードインの動き */
 .fadeIn {
   opacity: 0;
   transform: translateY(30px);
@@ -184,6 +209,19 @@ p {
   opacity: 1;
   transform: translateY(0);
 }
+
+.slideInLeft {
+  opacity: 0;
+  transform: translateX(-40px); /* 最初は左に40pxずらしておく */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slideInLeft.isActive {
+  opacity: 1;
+  transform: translateX(0);     /* 元の位置に戻す */
+}
+
+
 
 /* historyセクション */
 .history {
