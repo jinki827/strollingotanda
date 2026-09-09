@@ -24,10 +24,13 @@ const menuLinks = document.querySelectorAll("#sideBar a")
 // querySelectorAll：該当するすべての要素を取得する。node-listの形式で取得する。
 // node-list：複数の要素(node)
 
-const locationPath = location.pathname
-console.log(location.pathname)
-// 実装時に、全体のpathを取得してきてしまうので、ページのファイルパスだけに絞った。
+let locationPath = location.pathname
+if (locationPath.endsWith('/')) {
+  locationPath += "index.html"
+}
+console.log(locationPath)
 
+// 実装時に、全体のpathを取得してきてしまうので、ページのファイルパスだけに絞った。
 menuLinks.forEach(link => {
   
   // ページ遷移したら、activeクラスを外して、サイドバーを隠す
