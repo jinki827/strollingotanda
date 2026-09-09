@@ -85,3 +85,16 @@ img {
 .imgList p {
   margin-top: 5px;
 }
+
+
+/* 初回ロード時のフェードインの動き */
+.galleryHeader {
+  mask-image: linear-gradient(to right, #000 0%, #000 35%, transparent 65%, transparent 100%);
+  mask-size: 200% 100%;
+  mask-position: 100% 0;
+  transition: mask-position 2s ease-out;
+}
+
+.galleryHeader.isActive {
+  mask-position: 0 0;
+}
