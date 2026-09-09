@@ -141,7 +141,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 })
 
 // `.fadeIn`など　動作をつけたいクラスを持つすべての要素を監視対象に登録する
-document.querySelectorAll(".fadeIn, .slideInLeft, .charFadeIn").forEach(el => {
+document.querySelectorAll(".fadeIn, .slideInLeft, .slideInRight, .charFadeIn").forEach(el => {
   observer.observe(el)
 })
 

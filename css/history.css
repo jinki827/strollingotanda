@@ -108,3 +108,27 @@ p {
 .splideHistory .splide__pagination__page.is-active {
   background-color: var(--colorFontGreen);
 }
+
+
+/* 初回ロード時のフェードインの動き */
+.historyHeader {
+  mask-image: linear-gradient(to right, #000 0%, #000 35%, transparent 65%, transparent 100%);
+  mask-size: 200% 100%;
+  mask-position: 100% 0;
+  transition: mask-position 2s ease-out;
+}
+
+.historyHeader.isActive {
+  mask-position: 0 0;
+}
+
+.fadeIn {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fadeIn.isActive {
+  opacity: 1;
+  transform: translateY(0);
+}

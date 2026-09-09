@@ -26,10 +26,15 @@
 }
 
 body {
+  overflow-x: hidden;
   color: var(--colorFontGreen);
   font-family: var(--fontMain);
   font-weight: 400;
   font-style: normal;
+}
+
+main {
+  overflow: hidden;
 }
 
 a {

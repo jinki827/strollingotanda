@@ -221,6 +221,17 @@ p {
   transform: translateX(0);     /* 元の位置に戻す */
 }
 
+.slideInRight {
+  opacity: 0;
+  transform: translateX(40px); /* 最初は右に40pxずらしておく */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slideInRight.isActive {
+  opacity: 1;
+  transform: translateX(0);     /* 元の位置に戻す */
+}
+
 
 
 /* historyセクション */
