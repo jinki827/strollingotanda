@@ -67,10 +67,10 @@ a {
   /* filter: drop-shadow(0 1px 3px rgba(219, 186, 20, 0.5)); */
 }
 .sideButton div:nth-last-of-type(1) {
-  transform: translate(-50%, -15px);
+  transform: translate(-50%, -12px);
 }
 .sideButton div:nth-last-of-type(3) {
-  transform: translate(-50%, 12px);
+  transform: translate(-50%, 8px);
 }
 
 .sideButton.active div:nth-last-of-type(1) {
@@ -160,17 +160,18 @@ nav.active {
   border: 1.5px solid var(--colorAccent);
   border-radius: 5px;
   color: var(--colorAccent);
+  background-color: var(--colorAccent);
+  color: #FFF;
   font-family: inherit;
   font-size: 14px;
   font-weight: 580;
   letter-spacing: .3em;
-  background-color: transparent;
   transition: all 0.3s ease;
 }
 
 .linkButton:hover {
-  background-color: var(--colorAccent);
-  color: #FFF;
+  color: var(--colorAccent);
+  background-color: transparent;
 }
 
 
