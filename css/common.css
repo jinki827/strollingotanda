@@ -55,7 +55,7 @@ a {
 }
 /* ハンバーガーアイコン */
 .sideButton div {
-  height: 5px;
+  height: 4px;
   width: 60%;
   background-color: var(--colorIcon);
   position: absolute;
@@ -70,7 +70,7 @@ a {
   transform: translate(-50%, -15px);
 }
 .sideButton div:nth-last-of-type(3) {
-  transform: translate(-50%, 10px);
+  transform: translate(-50%, 12px);
 }
 
 .sideButton.active div:nth-last-of-type(1) {
@@ -142,7 +142,15 @@ nav.active {
   margin-right: 8px;
 }
 
-
+/* ロゴ */
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 15px;
+  margin-left: 15px;
+  z-index: 3;
+}
 
 .linkButton {
   display: inline-flex;
