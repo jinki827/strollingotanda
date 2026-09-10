@@ -49,8 +49,8 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top: 8px;
+  margin-right: 12px;
   z-index: 3;
 }
 /* ハンバーガーアイコン */
@@ -129,6 +129,7 @@ nav.active {
 .sideBar a.active{
   color: var(--colorAccent);
 }
+
 .sideBar a.active::before {
   content: "";
   width: 15px;
@@ -148,8 +149,14 @@ nav.active {
   top: 0;
   left: 0;
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 18px;
   z-index: 3;
+  width: 45px;
+  height: 45px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 .linkButton {
