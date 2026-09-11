@@ -236,9 +236,63 @@ p {
 /* Map dialog の動き */
 .mapDialog {
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
+  background-color: transparent;
 }
 
+
+.closeDialogButton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--colorBaseGreen03);
+  background-color: var(--colorBaseGreen);
+  cursor: pointer;
+}
+
+.closeDialogButton div {
+  height: 3px;
+  width: 60%;
+  background-color: var(--colorFontGreen);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.5px;
+  margin-left: -30%;
+  border-radius: 2px;
+}
+.closeDialogButton div:nth-of-type(1){
+  transform: rotate(-45deg);
+} 
+.closeDialogButton div:nth-of-type(2){
+  transform: rotate(45deg);
+} 
+
+.dialogInner {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colorBaseWhite);
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+
+.iframeWrap {
+  width: 100%;
+  margin: 20px 0;
+  aspect-ratio: 4/3;
+}
+
+.iframeWrap iframe {
+  width: 100%;
+  height: 100%;
+
+}
 
 
 /* historyセクション */
