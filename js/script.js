@@ -1,11 +1,3 @@
-// マップにとぶボタンを押した時の関数
-function openMap(buttonElement) {
-  // 押されたボタンからGoogleMapのURLを取得して新しいタブで開く
-  const googleUrl = buttonElement.getAttribute("data-google")
-  window.open(googleUrl, "_blank")
-  // apple版のMapアプリに誘導うる機能は削除。iPhoneユーザーもgoogleMap使ってる
-}
-
 // サイドメニューJS //
 const sideButtonEl = document.getElementById("sideButton")
 const sideBarEl = document.getElementById("sideBar")
@@ -56,7 +48,8 @@ menuLinks.forEach(link => {
 
 // トップ画面のJS //
 
-// splide　メインビジュアル
+// メインビジュアル
+// splide 制御
 const mainVisualEl = document.getElementById("mainVisual")
 if (mainVisualEl) {
   const mainVisualsplide = new Splide(mainVisualEl, {
@@ -79,10 +72,40 @@ if (mainVisualEl) {
 }
 
 
+// Spotセクション 
+// マップのdialogの制御
+const mapDialogEl = document.getElementById("mapDialog")
+const openDialogButtonEl = document.getElementById("openDialogButton")
+const closeDialogButtonEl = document.getElementById("closeDialogButton")
+
+// mapボタンを押して、ダイアログを開く
+openDialogButtonEl.addEventListener("click", () => {
+  mapDialogEl.showModal()
+})
+// 「×」ボタンを押して、ダイアログを閉じる
+closeDialogButtonEl.addEventListener("click", () => {
+  mapDialogEl.close()
+})
+// 背景を押しても、ダイアログを閉じる
+mapDialogEl.addEventListener("click", (event) => {
+  if (event.target === mapDialogEl) {
+    mapDialogEl.close()
+  }
+})
+
+// GoogleMapを開く関数
+function openMap(buttonElement) {
+  // 押されたボタンからGoogleMapのURLを取得して新しいタブで開く
+  const googleUrl = buttonElement.getAttribute("data-google")
+  window.open(googleUrl, "_blank")
+  // apple版のMapアプリに誘導うる機能は削除。iPhoneユーザーもgoogleMap使ってる
+}
 
 
 
-// splide　historyセクション
+
+// historyセクション
+// splide 制御
 const historyMediaEl = document.getElementById("historyMedia")
 const historyTextEl = document.getElementById("historyText")
 
@@ -106,7 +129,8 @@ if (historyMediaEl && historyTextEl) {
   historyText.mount()
 }
 
-// splide　galleryセクション
+// galleryセクション
+// splide 制御
 const galleryMediaEl = document.getElementById("galleryMedia")
 if (galleryMediaEl) {
   new Splide(galleryMediaEl, {
@@ -128,6 +152,9 @@ if (galleryMediaEl) {
     pagination: true,
   }).mount()
 }
+
+
+
 
 // 各要素をフェードインさせる処理
 const observer = new IntersectionObserver((entries, observer) => {
@@ -152,7 +179,10 @@ document.querySelectorAll(".fadeIn, .slideInLeft, .slideInRight, .charFadeIn").f
 })
 
 
-// history画面のＪＳ //
+
+
+
+// historyPageのＪＳ //
 document.querySelectorAll(`.splideHistory`).forEach(slide => {
   new Splide(slide, {
     type: "loop",

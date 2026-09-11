@@ -85,10 +85,27 @@
               <p class="spotDsecription">JR/東急池上線/浅草線/国道1号線
                 が交差する五反田の玄関口。<br>「五反田」の地名は、江戸時代、目黒川周辺の低地に約五反（約1,500坪）田んぼが広がっていたことから来ているとか。</p>
             </div>
-            <button type="button" class="linkButton" data-google="https://maps.app.goo.gl/SogEPpDGHgXMAQbu6"
-              data-apple="https://maps.apple/p/ugK7pfAG9nYSsU" onclick="openMap(this)">
-              Map
-            </button>
+
+            <!-- mapDialogButton -->
+            <button type="button" class="openDialogButton linkButton" id="openDialogButton">Map</button>
+            <!-- mapDialogArea -->
+            <dialog class="mapDialog" id="mapDialog">
+              <div class="dialogInner">
+                <h3 class="spotTitle">五反田駅</h3>
+                <div class="closeDialogButton" id="closeDialogButton">
+                  <div class="crossArrow01"></div>
+                  <div class="crossArrow02"></div>
+                </div>
+                <div class="iframeWrap">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d810.7659822926257!2d139.72323984650623!3d35.62615046146764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188afb6cb8284b%3A0xef79b42efdaba522!2z5LqU5Y-N55Sw6aeF!5e0!3m2!1sja!2sjp!4v1789093526911!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+              </div>
+              <button type="button" class="linkButton" data-google="https://maps.app.goo.gl/SogEPpDGHgXMAQbu6"
+                data-apple="https://maps.apple/p/ugK7pfAG9nYSsU" onclick="openMap(this)">
+                Google Map
+              </button>
+            </dialog>
+
           </div>
         </div>
         <!--袖ヶ崎神社-->

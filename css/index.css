@@ -233,6 +233,13 @@ p {
 }
 
 
+/* Map dialog の動き */
+.mapDialog {
+  width: 90%;
+  max-width: 500px;
+}
+
+
 
 /* historyセクション */
 .history {
