@@ -74,23 +74,31 @@ if (mainVisualEl) {
 
 // Spotセクション 
 // マップのdialogの制御
-const mapDialogEl = document.getElementById("mapDialog")
-const openDialogButtonEl = document.getElementById("openDialogButton")
-const closeDialogButtonEl = document.getElementById("closeDialogButton")
+const mapDialogEl = document.querySelectorAll(".mapDialog")
 
-// mapボタンを押して、ダイアログを開く
-openDialogButtonEl.addEventListener("click", () => {
-  mapDialogEl.showModal()
-})
-// 「×」ボタンを押して、ダイアログを閉じる
-closeDialogButtonEl.addEventListener("click", () => {
-  mapDialogEl.close()
-})
-// 背景を押しても、ダイアログを閉じる
-mapDialogEl.addEventListener("click", (event) => {
-  if (event.target === mapDialogEl) {
-    mapDialogEl.close()
+mapDialogEl.forEach(mapDialogEl => {
+  const spotInnerEl = mapDialogEl.closest(".spotInner")
+  const openDialogButtonEl = spotInnerEl ? spotInnerEl.querySelector(".openDialogButton") : null;
+  const closeDialogButtonEl = mapDialogEl.querySelector(".closeDialogButton")
+
+  // mapボタンを押したら、ダイアログを開く
+  if (openDialogButtonEl) {
+    openDialogButtonEl.addEventListener("click", () => {
+      mapDialogEl.showModal()
+    })
   }
+  // 「×」ボタンを押しあら、ダイアログを閉じる
+  if (closeDialogButtonEl) {
+    closeDialogButtonEl.addEventListener("click", () => {
+      mapDialogEl.close()
+    })
+  }
+  // 背景をおしても、ダイアログを閉じる
+  mapDialogEl.addEventListener("click", (event) => {
+    if (event.target === mapDialogEl) {
+      mapDialogEl.close()
+    }
+  })
 })
 
 // GoogleMapを開く関数
