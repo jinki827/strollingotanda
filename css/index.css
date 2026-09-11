@@ -238,37 +238,41 @@ p {
   width: 90%;
   max-width: 600px;
   background-color: transparent;
+  overflow: hidden;
 }
 
+.mapDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
 
 .closeDialogButton {
   width: 30px;
   height: 30px;
   position: absolute;
   top: 40px;
-  right: 40px;
+  right: 55px;
   border-radius: 50%;
-  border: 2px solid var(--colorBaseGreen03);
-  background-color: var(--colorBaseGreen);
+  /* border: 2px solid var(--colorBaseGreen03);
+  background-color: var(--colorBaseGreen); */
   cursor: pointer;
 }
 
 .closeDialogButton div {
-  height: 3px;
-  width: 60%;
+  height: 1px;
+  width: 80%;
   background-color: var(--colorFontGreen);
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -1.5px;
-  margin-left: -30%;
+  margin-left: -40%;
   border-radius: 2px;
 }
 .closeDialogButton div:nth-of-type(1){
-  transform: rotate(-45deg);
+  transform: rotate(-35deg);
 } 
 .closeDialogButton div:nth-of-type(2){
-  transform: rotate(45deg);
+  transform: rotate(35deg);
 } 
 
 .dialogInner {
@@ -279,6 +283,8 @@ p {
   border-radius: 12px;
   max-height: 85vh;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
 }
 
 
@@ -415,6 +421,12 @@ p {
   .spotWrap .spot1:nth-of-type(2) img {
     max-width: 440px;
   }
+  .closeDialogButton {
+    top: 40px;
+    right: 40px;
+  }
+
+
   .historyContainer {
     flex-direction: column;
     gap: 20px;
