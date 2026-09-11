@@ -235,7 +235,7 @@ p {
 
 /* Map dialog の動き */
 .mapDialog {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   background-color: transparent;
   overflow: hidden;
@@ -278,7 +278,7 @@ p {
 .dialogInner {
   display: flex;
   flex-direction: column;
-  background-color: var(--colorBaseWhite);
+  background-color: var(--colorBaseGreen);
   padding: 30px 20px;
   border-radius: 12px;
   max-height: 85vh;
@@ -287,6 +287,9 @@ p {
   scrollbar-color: #ccc transparent;
 }
 
+.dialogInner p {
+  font-size: 12px;
+}
 
 .iframeWrap {
   width: 100%;
