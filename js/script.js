@@ -74,11 +74,12 @@ if (mainVisualEl) {
 
 // Spotセクション 
 // マップのdialogの制御
-const mapDialogEl = document.querySelectorAll(".mapDialog")
+const mapDialogEls = document.querySelectorAll(".mapDialog")
 
-mapDialogEl.forEach(mapDialogEl => {
+mapDialogEls.forEach(mapDialogEl => {
   const spotInnerEl = mapDialogEl.closest(".spotInner")
   const openDialogButtonEl = spotInnerEl ? spotInnerEl.querySelector(".openDialogButton") : null;
+  // ".spotInner"が存在しなければ、nllを返す。
   const closeDialogButtonEl = mapDialogEl.querySelector(".closeDialogButton")
 
   // mapボタンを押したら、ダイアログを開く
