@@ -78,7 +78,7 @@ const mapDialogEls = document.querySelectorAll(".mapDialog")
 
 mapDialogEls.forEach(mapDialogEl => {
   const spotInnerEl = mapDialogEl.closest(".spotInner")
-  const openDialogButtonEl = spotInnerEl ? spotInnerEl.querySelector(".openDialogButton") : null;
+  const openDialogButtonEl = spotInnerEl ? spotInnerEl.querySelector(".openDialogButton") : null
   // ".spotInner"が存在しなければ、nllを返す。
   const closeDialogButtonEl = mapDialogEl.querySelector(".closeDialogButton")
 
@@ -192,6 +192,7 @@ document.querySelectorAll(".fadeIn, .slideInLeft, .slideInRight, .charFadeIn").f
 
 
 // historyPageのＪＳ //
+// splide 制御
 document.querySelectorAll(`.splideHistory`).forEach(slide => {
   new Splide(slide, {
     type: "loop",
@@ -214,4 +215,35 @@ document.querySelectorAll(`.splideHistory`).forEach(slide => {
     arrows: false,
     pagination: true,
   }).mount()
+})
+
+
+// GalleryPageのＪＳ //
+// Galleryのdialogの制御
+const galleryDialogEls = document.querySelectorAll(".galleryDialog")
+
+galleryDialogEls.forEach(galleryDialogEl => {
+  const imgListEl = galleryDialogEl.closest(".imgList")
+  const openDialogButtonEl = imgListEl ? imgListEl.querySelector(".openDialogButton") : null
+  const closeDialogButtonEl  = galleryDialogEl.querySelector(".closeDialogButton")
+
+  // mapボタンを押したら、ダイアログを開く
+  if (openDialogButtonEl) {
+    openDialogButtonEl.addEventListener("click", () => {
+      galleryDialogEl.showModal()
+    })
+  }
+  // 「×」ボタンを押しあら、ダイアログを閉じる
+  if (closeDialogButtonEl) {
+    closeDialogButtonEl.addEventListener("click", () => {
+      galleryDialogEl.close()
+    })
+  }
+  // 背景をおしても、ダイアログを閉じる
+  galleryDialogEl.addEventListener("click", (event) => {
+    if (event.target === galleryDialogEl) {
+      galleryDialogEl.close()
+    }
+  })
+
 })
