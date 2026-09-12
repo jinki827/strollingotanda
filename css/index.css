@@ -52,6 +52,45 @@ p {
 }
 
 
+/* Top画面用のサイドボタンのマスク */
+.sideButtonMask {
+  width: 72px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  z-index: 1;
+}
+
+/* 初回フェードインの動き */
+.sideButton.slideInRight {
+  opacity: 0;
+  transform: translateX(40px); /* 最初は右に40pxずらしておく */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.sideButtonMask.slideInRight.isActive {
+  opacity: 1;
+  transform: translateX(0);     /* 元の位置に戻す */
+  transition-delay: 5s;
+}
+.sideButtonMask.slideInRight {
+  opacity: 0;
+  transform: translateX(40px); /* 最初は右に40pxずらしておく */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.sideButton.slideInRight.isActive {
+  opacity: 1;
+  transform: translateX(0);     /* 元の位置に戻す */
+  transition-delay: 5s;
+}
+
+
 /* メインビジュアル */
 .topContents {
   position: relative;
@@ -231,6 +270,7 @@ p {
   opacity: 1;
   transform: translateX(0);     /* 元の位置に戻す */
 }
+
 
 
 /* Map dialog の動き */
