@@ -208,6 +208,11 @@ p {
   padding: 0 20px;
 }
 
+.spot1Wrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .spot1 {
   display: flex;
   gap: 50px;
@@ -364,10 +369,12 @@ p {
 }
 
 .historyContainer {
+  max-width: 900px;
   display: flex;
   align-items: center;
   gap: 50px;
   padding: 50px 0px;
+  margin: 0 auto;
 }
 
 .historylinkButton {
