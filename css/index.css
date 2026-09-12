@@ -112,7 +112,7 @@ p {
 }
 
 .topContents .splide {
-  height: 75vh;
+  height: 80vh;
 }
 
 .topContents .splide__slide {
@@ -149,7 +149,7 @@ p {
 /* siteConcept セクション */
 .siteConcept {
   padding: 0 10px;
-  height: 25vh;
+  height: 20vh;
   min-height: 150px;
   background-color: var(--colorBaseGreen);
   display: flex;
