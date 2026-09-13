@@ -1,4 +1,6 @@
 // サイドメニューJS //
+
+// サイドバーを出したり戻したりする処理  と  現在のページのボタンに色を変えるための処理
 const sideButtonEl = document.getElementById("sideButton")
 const sideBarEl = document.getElementById("sideBar")
 const maskEl = document.getElementById("mask")
@@ -9,7 +11,6 @@ sideButtonEl.addEventListener("click", function() {
   sideBarEl.classList.toggle("active")
   maskEl.classList.toggle("active")
 })
-
 
 const menuLinks = document.querySelectorAll("#sideBar a")
 // querySelector : CSSの指定の仕方・要素を取得できる。※該当する最初の要素だけ取得
@@ -73,7 +74,7 @@ if (mainVisualEl) {
 
 
 // Spotセクション 
-// マップのdialogの制御
+// mapDialogのモーダルウィンドウ制御
 const mapDialogEls = document.querySelectorAll(".mapDialog")
 
 mapDialogEls.forEach(mapDialogEl => {
@@ -190,23 +191,20 @@ document.querySelectorAll(".fadeIn, .slideInLeft, .slideInRight").forEach(el => 
 // siteConceptのフェードイン処理用
 const observerCharFadeIn = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
-    // 対象の要素が画面内に入ったか判定
     if (entry.isIntersecting) {
-      // 画面内に入ったら、`isActive` クラスを付与して、フェードイン
       entry.target.classList.add("isActive")
-
-      // 初回だけ実行したいので、一度表示されたら要素の監視を解除する
       observer.unobserve(entry.target)
     }
   })
   }, {
     // オプション設定
-    rootMargin: '0px 0px 0px 0px'  // 画面の下から100px 分入ったタイミングで発火させるときれいらしい
+    rootMargin: '0px 0px 0px 0px'  // 画面に入った瞬間発火！
 })
 
 document.querySelectorAll(".charFadeIn").forEach(el => {
   observerCharFadeIn.observe(el)
 })
+
 
 
 // historyPageのＪＳ //
@@ -237,7 +235,7 @@ document.querySelectorAll(`.splideHistory`).forEach(slide => {
 
 
 // GalleryPageのＪＳ //
-// Galleryのdialogの制御
+// galleryDialogのモーダルウィンドウ制御
 const galleryDialogEls = document.querySelectorAll(".galleryDialog")
 
 galleryDialogEls.forEach(galleryDialogEl => {

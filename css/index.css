@@ -112,7 +112,7 @@ p {
 }
 
 .topContents .splide {
-  height: 80vh;
+  height: 75vh;
 }
 
 .topContents .splide__slide {
@@ -137,8 +137,6 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(to right, transparent 30%, rgba(255, 255, 255, 0.5) 100%); */
-  /* background: linear-gradient(to right, transparent 30%, rgba(240, 233, 238, 0.5) 100%); */
   background: linear-gradient(to right, transparent 20%, rgba(40, 18, 0, 0.4) 100%);
   pointer-events: none;
 }
@@ -149,7 +147,7 @@ p {
 /* siteConcept セクション */
 .siteConcept {
   padding: 0 10px;
-  height: 20vh;
+  height: 25vh;
   min-height: 150px;
   background-color: var(--colorBaseGreen);
   display: flex;
@@ -298,8 +296,6 @@ p {
   top: 40px;
   right: 55px;
   border-radius: 50%;
-  /* border: 2px solid var(--colorBaseGreen03);
-  background-color: var(--colorBaseGreen); */
   cursor: pointer;
 }
 
