@@ -127,29 +127,3 @@ p {
   margin-top: 10px;
 }
 
-.closeDialogButton {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 5%;
-  cursor: pointer;
-}
-
-.closeDialogButton div {
-  height: 1px;
-  width: 80%;
-  background-color: var(--colorBaseFooter);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -40%;
-  border-radius: 2px;
-}
-.closeDialogButton div:nth-of-type(1){
-  transform: rotate(-35deg);
-} 
-.closeDialogButton div:nth-of-type(2){
-  transform: rotate(35deg);
-} 

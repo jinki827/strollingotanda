@@ -158,6 +158,7 @@ nav.active {
   width: 100%;
 }
 
+/* linkButton リンクボタンstyle */
 .linkButton {
   display: inline-flex;
   justify-content: center;
@@ -180,6 +181,37 @@ nav.active {
   background-color: var(--colorAccent);
   color: #FFF;
 }
+
+/* dialogButton 閉じるボタンstyle */
+.closeDialogButton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.closeDialogButton::before,
+.closeDialogButton::after {
+  content: "";
+  height: 1px;
+  width: 80%;
+  background-color: var(--colorFontGreen);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -40%;
+  border-radius: 2px;
+}
+.closeDialogButton::before{
+  transform: rotate(-35deg);
+} 
+.closeDialogButton::after {
+  transform: rotate(35deg);
+} 
+
 
 
 .footerInner {
