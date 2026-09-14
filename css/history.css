@@ -1,22 +1,5 @@
 @charset "UTF-8";
 
-:root {
-  /* フォント指定 */
-  --fontMain:"Zen Kurenaido", sans-serif;
-  --fontAccent: "Zen Maru Gothic", sans-serif;
-  
-  /* 色の指定 */
-  --colorFontGreen: #2A5235;
-  --colorFontWhite: #f5f5f5;
-  --colorBaseGreen: #E8ECEA;
-  --colorBaseWhite: #F5F5F5;
-  --colorBaseFooter: #3A6346;
-  --colorBaseGreen02: #1B2820;
-  --colorBaseGreen03: #C6DAC6;
-  --colorAccent: #8f5687;
-  --colorIcon: #92AF9A;
-}
-
 h2 {
   color: var(--colorFontWhite);
   font-family: var(--fontAccent);
