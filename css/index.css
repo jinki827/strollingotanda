@@ -1,30 +1,11 @@
 @charset "UTF-8";
 
-:root {
-  /* フォント指定 */
-  --fontMain:"Zen Kurenaido", sans-serif;
-  --fontAccent: "Zen Maru Gothic", sans-serif;
-  
-  /* 色の指定 */
-  --colorFontGreen: #2A5235;
-  --colorFontWhite: #f5f5f5;
-  --colorBaseGreen: #E8ECEA;
-  --colorBaseWhite: #F5F5F5;
-  --colorBaseFooter: #3A6346;
-  --colorBaseGreen02: #1B2820;
-  --colorBaseGreen03: #C6DAC6;
-  --colorAccent: #8f5687;
-  /* --colorIcon: #92AF9A; */
-}
-
-
 h2 {
   color: var(--colorFontGreen);
   font-family: var(--fontAccent);
   font-size: 36px;
   margin: 20px 0px;
   letter-spacing: .1em;
-  text-shadow: 0 0 2 #1B2820;
 }
 
 h3 {
@@ -215,7 +196,6 @@ p {
   display: flex;
   gap: 50px;
   padding: 50px 0px;
-  /* align-items: stretch; */
 }
 
 .spot1:nth-child(odd) {
@@ -279,7 +259,7 @@ p {
 /* Map dialog の動き */
 .mapDialog {
   width: 100%;
-  max-width: 600px;
+  max-width: 1050px;
   background-color: transparent;
   overflow: hidden;
 }
@@ -289,32 +269,10 @@ p {
   backdrop-filter: blur(2px);
 }
 
-.closeDialogButton {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 40px;
-  right: 55px;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
-.closeDialogButton div {
-  height: 1px;
-  width: 80%;
-  background-color: var(--colorFontGreen);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -40%;
-  border-radius: 2px;
+.closeDialogButton {
+  top: 4%;
 }
-.closeDialogButton div:nth-of-type(1){
-  transform: rotate(-35deg);
-} 
-.closeDialogButton div:nth-of-type(2){
-  transform: rotate(35deg);
-} 
 
 .dialogInner {
   display: flex;
@@ -378,6 +336,20 @@ p {
   text-align: center;
 }
 
+.historylinkButton .linkButton {
+  position: relative;
+}
+.historylinkButton .linkButton::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  border-top: 1.8px solid currentColor; /* 上の線（currentColorで文字色に合わせる） */
+  border-right: 1.8px solid currentColor; /* 右の線 */
+  transform: translateY(-50%) rotate(45deg);
+}
 .historyContainer .splide__slide {
   padding: 15px;
 }
@@ -438,7 +410,6 @@ p {
 
 .gallery .splide__slide img {
   width: 100%;
-  /* max-width: 750px; */
   height: auto;
   aspect-ratio: 4/3;
   object-fit: cover;
@@ -451,6 +422,21 @@ p {
 .gallerylinkButton {
   margin: 60px auto 30px;
   text-align: center;
+}
+
+.gallerylinkButton .linkButton {
+  position: relative;
+}
+.gallerylinkButton .linkButton::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  border-top: 1.8px solid currentColor; /* 上の線（currentColorで文字色に合わせる） */
+  border-right: 1.8px solid currentColor; /* 右の線 */
+  transform: translateY(-50%) rotate(45deg);
 }
 
 

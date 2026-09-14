@@ -1,29 +1,11 @@
 @charset "UTF-8";
 
-:root {
-  /* フォント指定 */
-  --fontMain:"Zen Kurenaido", sans-serif;
-  --fontAccent: "Zen Maru Gothic", sans-serif;
-  
-  /* 色の指定 */
-  --colorFontGreen: #2A5235;
-  --colorFontWhite: #f5f5f5;
-  --colorBaseGreen: #E8ECEA;
-  --colorBaseWhite: #F5F5F5;
-  --colorBaseFooter: #3A6346;
-  --colorBaseGreen02: #1B2820;
-  --colorBaseGreen03: #C6DAC6;
-  --colorAccent: #8f5687;
-  --colorIcon: #92AF9A;
-}
-
 h2 {
   color: var(--colorFontWhite);
   font-family: var(--fontAccent);
   font-size: 36px;
   margin: 20px 0px 200px;
   letter-spacing: .1em;
-  /* text-shadow: 0 0 2 #1B2820; */
 }
 
 h3 {
@@ -52,7 +34,6 @@ p {
 
 .splide__slide img {
   width: 100%;
-  /* max-width: 750px; */
   height: auto;
   aspect-ratio: 4/3;
   object-fit: cover;
@@ -65,7 +46,6 @@ p {
 .headerBar {
   width: 100%;
   height: 65px;
-  /* background-color: var(--colorBaseGreen); */
   background-color: rgba(43, 53, 46, 0.8);
   backdrop-filter: blur(8px);
   position: fixed;

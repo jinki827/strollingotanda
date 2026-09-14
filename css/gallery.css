@@ -1,29 +1,11 @@
 @charset "UTF-8";
 
-:root {
-  /* フォント指定 */
-  --fontMain: "Zen Kurenaido", sans-serif;
-  --fontAccent: "Zen Maru Gothic", sans-serif;
-
-  /* 色の指定 */
-  --colorFontGreen: #2A5235;
-  --colorFontWhite: #f5f5f5;
-  --colorBaseGreen: #E8ECEA;
-  --colorBaseWhite: #F5F5F5;
-  --colorBaseFooter: #3A6346;
-  --colorBaseGreen02: #1B2820;
-  --colorBaseGreen03: #C6DAC6;
-  --colorAccent: #8f5687;
-  --colorIcon: #92AF9A;
-}
-
 h2 {
   color: var(--colorFontGreen);
   font-family: var(--fontAccent);
   font-size: 36px;
   margin: 20px 0px 120px;
   letter-spacing: .1em;
-  text-shadow: 0 0 2 #1B2820;
 }
 
 h3 {
@@ -84,7 +66,7 @@ p {
 .galleryContainer {
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
   gap: 30px 15px;
   justify-content: center;
 }
@@ -145,29 +127,3 @@ p {
   margin-top: 10px;
 }
 
-.closeDialogButton {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 5%;
-  cursor: pointer;
-}
-
-.closeDialogButton div {
-  height: 1px;
-  width: 80%;
-  background-color: var(--colorBaseFooter);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -40%;
-  border-radius: 2px;
-}
-.closeDialogButton div:nth-of-type(1){
-  transform: rotate(-35deg);
-} 
-.closeDialogButton div:nth-of-type(2){
-  transform: rotate(35deg);
-} 

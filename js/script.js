@@ -123,6 +123,7 @@ if (historyMediaEl && historyTextEl) {
   const historyMedia = new Splide(historyMediaEl, {
     speed: 800,
     arrows: false,
+    easing: "ease-out",
     pagination: true,
   })
 
@@ -158,6 +159,7 @@ if (galleryMediaEl) {
     },
     autoplay: true,
     speed: 1000,
+    easing: "ease-out",
     arrows:false,
     pagination: true,
   }).mount()
@@ -228,6 +230,7 @@ document.querySelectorAll(`.splideHistory`).forEach(slide => {
     },
     autoplay: true,
     speed: 1000,
+    easing: "ease-out",
     arrows: false,
     pagination: true,
   }).mount()
