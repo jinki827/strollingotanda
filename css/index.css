@@ -336,6 +336,20 @@ p {
   text-align: center;
 }
 
+.historylinkButton .linkButton {
+  position: relative;
+}
+.historylinkButton .linkButton::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  border-top: 1.8px solid currentColor; /* 上の線（currentColorで文字色に合わせる） */
+  border-right: 1.8px solid currentColor; /* 右の線 */
+  transform: translateY(-50%) rotate(45deg);
+}
 .historyContainer .splide__slide {
   padding: 15px;
 }
@@ -408,6 +422,21 @@ p {
 .gallerylinkButton {
   margin: 60px auto 30px;
   text-align: center;
+}
+
+.gallerylinkButton .linkButton {
+  position: relative;
+}
+.gallerylinkButton .linkButton::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  border-top: 1.8px solid currentColor; /* 上の線（currentColorで文字色に合わせる） */
+  border-right: 1.8px solid currentColor; /* 右の線 */
+  transform: translateY(-50%) rotate(45deg);
 }
 
 
