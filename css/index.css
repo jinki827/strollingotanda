@@ -6,7 +6,6 @@ h2 {
   font-size: 36px;
   margin: 20px 0px;
   letter-spacing: .1em;
-  text-shadow: 0 0 2 #1B2820;
 }
 
 h3 {
@@ -197,7 +196,6 @@ p {
   display: flex;
   gap: 50px;
   padding: 50px 0px;
-  /* align-items: stretch; */
 }
 
 .spot1:nth-child(odd) {
@@ -261,7 +259,7 @@ p {
 /* Map dialog の動き */
 .mapDialog {
   width: 100%;
-  max-width: 600px;
+  max-width: 1050px;
   background-color: transparent;
   overflow: hidden;
 }
@@ -420,7 +418,6 @@ p {
 
 .gallery .splide__slide img {
   width: 100%;
-  /* max-width: 750px; */
   height: auto;
   aspect-ratio: 4/3;
   object-fit: cover;

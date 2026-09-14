@@ -173,7 +173,7 @@ nav.active {
   font-size: 14px;
   font-weight: 580;
   letter-spacing: .1em;
-  transition: all 0.3s ease;
+  transition: .3s;
 }
 
 .linkButton:hover {
