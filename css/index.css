@@ -213,7 +213,8 @@ p {
 
 .spot1 img {
   width: 50%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
+  height: auto;
   flex-shrink: 0;
   object-fit: cover;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
@@ -458,8 +459,10 @@ p {
     width: 100%;
     aspect-ratio: 4 / 3;
   }
+
   .spotWrap .spot1:nth-of-type(2) img {
     max-width: 440px;
+    aspect-ratio: 3 / 4;
   }
   .closeDialogButton {
     top: 40px;
